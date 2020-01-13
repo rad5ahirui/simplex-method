@@ -4,7 +4,7 @@ It depends on SymPy.
 
 I implemented it just for fun.
 
-It may be unefficient and have some bugs.
+It may be inefficient and have some bugs.
 
 ## Reference
 * B. Korte and J. Vygen, Combinatorial Optimization. Springer Berlin Heidelberg, 2012.
