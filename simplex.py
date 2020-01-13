@@ -23,7 +23,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from sympy import Matrix, pprint
+from sympy import Matrix
 
 status = ('Optimal', 'Unbounded', 'Infeasible')
 OPTIMAL = 0
@@ -249,6 +249,7 @@ def maximize(A, b, c):
     return OPTIMAL, tab[-1, -1], x
 
 def main():
+    from sympy import pprint
     c = Matrix([[1, 1]])
     A = Matrix([[2, 3],
                 [1, -1]])
