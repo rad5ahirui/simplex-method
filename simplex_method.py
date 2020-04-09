@@ -202,15 +202,6 @@ class SimplexMethod(object):
             if idx != -1 and not found[idx]:
                 tableau[-1, :] += self._c[i] * tableau.row(idx)
                 found[idx] = True
-
-        # debug
-        found = [False] * m
-        for i in range(col):
-            idx = self._unit_vector_index(tableau.col(i))
-            if idx != -1 and not found[idx]:
-                found[idx] = True
-        assert False not in found
-
         return tableau
 
     def _phase1(self):
