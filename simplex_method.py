@@ -23,7 +23,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from sympy import Matrix, pprint
+from sympy import Matrix
 
 status = ('Optimal', 'Feasible', 'Unbounded', 'Infeasible', 'Continue')
 OPTIMAL = 0
