@@ -47,7 +47,7 @@ class SimplexMethod(object):
 
     def maximize(self):
         self._status, self._tableau = self._phase1()
-        if self.status not in (OPTIMAL, FEASIBLE):
+        if self.status != FEASIBLE:
             return None, None
         self._status, self._tableau = self._simplex(self._tableau)
         if self.status != OPTIMAL:
@@ -216,7 +216,7 @@ class SimplexMethod(object):
         return FEASIBLE, self._modify_tableau(tableau, mp, mpp, n)
 
 def main():
-    from sympy import Matrix
+    from sympy import pprint
     A = Matrix([[1, 1, 1],
                 [-2, -1, 1],
                 [0, 1, -1]])
